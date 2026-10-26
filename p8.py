@@ -114,6 +114,7 @@ def buscarNotaMaxima(p:pila[tuple[str,int]])-> tuple[str,int]:
 pi = pila()
 pi.put(["mati",7])
 pi.put(["vale",9])
+pi.put(["eze",8])
 pi.put(["sofi",10])
 
 n = buscarNotaMaxima(pi)
