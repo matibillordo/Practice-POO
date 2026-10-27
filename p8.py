@@ -119,3 +119,45 @@ pi.put(["sofi",10])
 
 n = buscarNotaMaxima(pi)
 # print(n) # descomentar para imprimir
+
+# problema calcular promedio por estudiante (in notas:seq⟨seq⟨Char⟩ × R⟩) : Diccionario ⟨ seq⟨Char⟩, R⟩ {
+# requiere: {El primer componente de las tuplas de notas no es una
+# cadena vac´ıa}
+# requiere: {El segundo componente de las tuplas de notas est´a en el
+# rango [0, 10]}
+# asegura: {Todas las claves de res son nombres que aparecen en
+# notas (primer componente)}
+# asegura: {Todos los nombres de notas (primer componente) son
+# clave en res}
+# asegura: {El valor de cada clave de res es el promedio de todas las notas que obtuvo el estudiante (segunda componente de notas)}
+# }
+
+#Diccionarios: items(), keys(), values(), pop(clave), clear()
+#def promedioEstudiantes(notas:list[tuple[str,int]]) -> dict[str,float]:
+
+
+#notas = {[("mati":10),("coni":9)("camilo":8)]}#creo mi diccionario
+#promedioEstudiantes(notas)
+
+#print(notas.pop("mati")) #elimina el item con clave mati
+
+#notas["Mati"]= 11 #agregar elemento a notas
+
+#print(notas.items())
+#print(notas.clear()) #elimina todo y muestra none
+
+#archivos 
+archivo = open("/home/Estudiante/Descargas/yoTeEsperare.txt", "r")
+#leer = archivo.readline()  
+#print(leer)
+def contar_lineas(nombre:str)->int:
+    leerUnaLinea= nombre.readline()
+    lineas:int = 1
+    while len(leerUnaLinea) != 0:
+        leerUnaLinea = nombre.readline()
+        lineas += 1
+    return lineas
+
+contar = contar_lineas(archivo)
+print(contar) 
+#corregir porque me toma lineas en blanco, tip es armar una lista con las lineas y eliminar los espacios en blanco
